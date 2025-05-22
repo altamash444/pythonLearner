@@ -1,5 +1,11 @@
 import os
 
+if os.path.exists("books.txt"):
+	pass
+else:
+	file = open("books.txt", "w")
+	file.close()
+
 class Library:
 	books = []
 	file = open("books.txt", "r")
@@ -62,12 +68,6 @@ class Library:
 				print(line, end="")
 		else:
 			print("No books found to list.")
-
-if os.path.exists("books.txt"):
-	pass
-else:
-	file = open("books.txt", "w")
-	file.close()
 
 hkl = Library()
 
